@@ -38,7 +38,24 @@ def get_num_character(content):
                 character_count[character] += 1
 
     return character_count
+    
 
+# ----------------------polish------------------------------------
+
+
+def sort_on(items):
+    return items["num"]
+
+
+
+def sort_dictionary(dictionary):
+    dict_list = []
+    for key, value in dictionary.items():
+        dict_list.append({"char":key, "num" : value})
+   
+    dict_list.sort(reverse=True, key=sort_on)
+
+    return dict_list
 
 
 
